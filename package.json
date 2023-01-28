@@ -8,6 +8,9 @@
     "start": "webpack serve --hot --open --mode development",
     "test": "jest",
     "lint": "npm run lint:scripts && npm run lint:styles && npm run lint:editor",
+    "lint:scripts": "eslint --fix \"./app/**/*.js\"",
+    "lint:styles": "stylelint \"./app/**/*.(css)\" --fix",
+    "lint:editor": "eclint fix",
     "deploy": "gh-pages -d dist"
   },
   "husky": {
